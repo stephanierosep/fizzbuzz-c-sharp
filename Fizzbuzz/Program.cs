@@ -7,32 +7,25 @@ namespace Fizzbuzz
         static void Main(string[] args)
      
         {
-            bool isDivisibleByThree;
-            bool isDivisibleByFive;
+        for (int i = 1; i <= 100 ; i++)
 
-            for (int i = 1; i <= 100; i++)
+            if (i % 3 == 0 && i % 5 == 0)
             {
-                isDivisibleByThree = (i % 3 == 0);
-                isDivisibleByFive = (i % 5 == 0);
-
-                if (isDivisibleByThree && isDivisibleByFive)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (isDivisibleByThree) 
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (isDivisibleByFive)
-                { 
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
+                Console.WriteLine("FizzBuzz");
             }
-            Console.Read();
+        else if (i % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (i % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+        else
+            {
+                Console.WriteLine(i);
+            }
+
         }
     }
 }
